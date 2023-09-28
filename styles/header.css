@@ -6,10 +6,11 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-
+.cabecalho{
+    display: flex;
+}
 .cabecalho{
     background-color: var(--branco);
-    display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -39,7 +40,7 @@
 .lista-menu__titulo{
     color: var(--amarelo);
 }
-.lista-menu__item{
+.lista-menu__link{
     background: var(--roxo-degrade);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -49,70 +50,45 @@
 }
 .lista-menu__titulo, .lista-menu__item{
     padding:1em;
-    background-color: var(--branco);}
-    {
-    .titulo__cabecalho{
-        display: none;
-    
-    
-    }
+    background-color: var(--branco);
 }
-@media screen and (min-width: 840px) {
-    .cabecalho{
-        font-size: 30px;
-        font-family:  var(--fonte-secundaria);
-        color: rgb(43, 226, 101);
-        display: block;
-    }
-     
-    .titulo{
+.container__titulo{
+    display: none;
+}
+.opcoes{
+    display: none;
+}
+
+
+
+@media screen and (min-width: 1024px) { 
+.container__titulo{
     font-size: 30px;
-    font-family: var(--fonte-secundaria);
-    color: rgb(43, 226, 101);
     display: block;
-    }
-    .imagem{
-        font-size: 30px;
-        font-family: var(--fonte-secundaria);
-        color:rgb(43, 226, 101);
-        display: block;
-
-
-
-    }
-     
 }
+.opcoes{
+    display: flex;
 
-@media screen and (min-width: 1024px) {
-    .cabecalho{
-        font-size: 30px;
-        font-family: var(--fonte-secundaria);
-        color:rgb(226, 22, 90);
-        display: block;
-        border-top: 10px groove rgb(92, 33, 133);
-        border-left: 10px dotted rgb(13, 5, 12);
-        border-right: 10px solid rgb(13, 5, 19);
-        border-bottom: 10px dashed rgb(92, 33, 133);
+}
+    .opcoes__item{
+        padding: 0 1em;
     }
-      
-
-    .titulo{
-    font-size: 30px;
-    font-family: var(--fonte-secundaria);
-    color: rgb(226, 22, 90);
-     
+    .opcoes__link{
+        text-decoration: none;
+        color: var(--preto);
+    }
+    .container__imagem-transparente {
+        display: none;
+            }
+            .cabecalho__menu-hamburguer {
+        display: none;
+            }
+            .opcoes__botao:checked~.lista-menu{
+                display: block;
+                width: auto;
+            }
+            .opcoes__botao{
+                display:none
+            }
     
-
-    }
-    .imagem{
-        font-size: 50px;
-        font-family: var(--fonte-secundaria);
-        color: rgb(226, 22, 90);
-        display: block;
-       
-
-
-
-
-    }
-}
+ }
